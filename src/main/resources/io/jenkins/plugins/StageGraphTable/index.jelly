@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
+        <!--<st:include page="sidepanel.jelly" it="${it.run}"/> -->
+            <table class="pane bigtable">
+                <tr>
+                    <th>${%Stage Name}</th>
+                    <th>${%Status}</th>
+                    <th>${%Duration}</th>
+                    <th>${%Start Time}</th>
+                </tr>
+                <j:forEach var="stage" items="${it.stages}">
+                    <tr>
+					    <td>
+					    	<a href="${rootURL}/test">
+                                ${stage.name}
+                            </a>
+					    </td>
+					    <td>${stage.status}</td>
+					    <td>${stage.duration}</td> 
+					    <td>${stage.startTime}</td>
+					</tr>
+                </j:forEach>
+            </table>
+</j:jelly>

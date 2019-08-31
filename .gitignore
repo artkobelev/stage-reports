@@ -1,0 +1,11 @@
+#eclipse specific
+.project
+.classpath
+.settings/
+
+.idea/**
+**.iml
+
+#maven specific
+target
+!**/src/**/target
